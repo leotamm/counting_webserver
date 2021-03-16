@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<project name="testassignment" basedir="." default="deploy">
+
+	<target name="build_war">
+	    <war basedir="war" destfile="testassignment.war"/>
+	</target>
+	
+	<target name="deploy">
+		<scp sftp="true" trust="true" file="testassignment.war" remoteTofile="YOUR_REMOTE_PATH/testassignment.war" port="YOUR_PORT" password="YOUR_PASS"/>
+	</target>
+
+</project>
